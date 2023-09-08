@@ -6,8 +6,9 @@ function updateFontSize() {
 
     const fontSize = `${Math.min(scaleValue, (windowWidth / 1000) * scaleValue)}%`;
 
-    const elementsToUpdate = document.querySelectorAll("h3, p");
+    const elementsToUpdate = document.querySelectorAll("h2,h4, p");
     elementsToUpdate.forEach(function(element) {
+        // fontCalc = fontSize 
         element.style.fontSize = fontSize;
     });
 }

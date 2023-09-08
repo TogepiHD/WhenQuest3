@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #2E2E2E;
-    color: #FFFFFF;
+    color: #ffffff;
     text-align: center;
     margin: 0;
     padding: 0;
@@ -29,19 +29,24 @@ body {
 }
 
 p {
-    font-size: 4vw;
+    font-size: 2.75vw;
     margin: 0;
 }
 
-h3 {
+h2 {
     font-size: 6vw;
+    margin: 0;
+}
+
+h4 {
+    font-size: 4vw;
     margin: 0;
 }
 
 input[type="range"] {
     width: 85%;
     background: #333;
-    height: 5px;
+    height: 8px;
     -webkit-appearance: none;
     appearance: none; 
     position: fixed; 
@@ -52,9 +57,9 @@ input[type="range"] {
 input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 10px;
-    height: 10px;
-    background: #fff;
+    width: 10px; 
+    height: 10px; 
+    background: #4e4e4e;
     cursor: pointer;
 }
 

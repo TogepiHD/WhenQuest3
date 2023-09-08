@@ -5,30 +5,59 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
+    font-size: 16px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    font-size: 16px; /* Set your base font size here */
 }
 
-.spacer {
+.spacer10 {
+    text-align: center;
+    margin: 10px;
+}
+
+.spacer20 {
     text-align: center;
     margin: 20px;
 }
 
 .banner img {
-    width: 100%; /* Adjust the width as needed to fit your design */
-    max-height: 200px; /* Adjust the max height as needed */
+    width: 100%;
+    max-height: 200px;
 }
 
 p {
-    font-size: 4vw; /* Adjust the value as needed */
+    font-size: 4vw;
     margin: 0;
 }
 
 h3 {
-    font-size: 6vw; /* Adjust the value as needed */
+    font-size: 6vw;
     margin: 0;
+}
+
+input[type="range"] {
+    width: 85%;
+    background: #333;
+    height: 5px;
+    -webkit-appearance: none;
+    appearance: none; 
+    position: fixed; 
+    bottom: 0; 
+    z-index: 999; 
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    cursor: pointer;
+}
+
+body {
+    padding-bottom: 50px;
 }

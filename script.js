@@ -1,6 +1,33 @@
+const slider = document.getElementById("text-scale-two");
+
+function updateFontSize() {
+    const scaleValue = slider.value;
+    const windowWidth = window.innerWidth;
+
+    const fontSize = `${Math.min(scaleValue, (windowWidth / 1000) * scaleValue)}%`;
+
+    const elementsToUpdate = document.querySelectorAll("h3, p");
+    elementsToUpdate.forEach(function(element) {
+        element.style.fontSize = fontSize;
+    });
+}
+
+slider.addEventListener("input", updateFontSize);
+
+window.addEventListener("resize", updateFontSize);
+
+function initializeFontSizeAndSlider() {
+    const scaleValue = slider.value;
+    updateFontSize(scaleValue);
+}
+
+initializeFontSizeAndSlider();
+
+////////////////////////////////////////////////
+
 function updateCountdown() {
     const currentDate = new Date();
-    let endDate = new Date("2023-09-27T16:00:00Z"); // Your end date
+    let endDate = new Date("2023-09-27T16:00:00Z");
 
     let timeDiff = endDate - currentDate;
 
@@ -49,7 +76,7 @@ function updateCountdown() {
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    endDate = new Date("2023-10-10T00:00:00Z"); // Your end date
+    endDate = new Date("2023-10-10T00:00:00Z");
 
     timeDiff = endDate - currentDate;
 
@@ -97,8 +124,6 @@ function updateCountdown() {
     document.getElementById("countdowntwo").innerHTML = countdown_parts;
 }
 
-// Call updateCountdown every second
 setInterval(updateCountdown, 1000);
 
-// Initial call to set the countdown
 updateCountdown();

@@ -1,65 +1,57 @@
 function updateCountdown() {
     const currentDate = new Date();
-    const endDate = new Date("2023-09-12T00:00:00Z"); // Your end date
+    let endDate = new Date("2023-09-12T00:00:00Z"); // Your end date
 
-    timeDiff = endDate - currentDate;
+    let timeDiff = endDate - currentDate;
 
     if (timeDiff <= 0) {
         document.getElementById("countdownone").innerHTML = "Meta connect is here!";
         return;
     }
 
-    seconds = Math.floor((timeDiff / 1000) % 60);
-    minutes = Math.floor((timeDiff / 1000 / 60) % 60);
-    hours = Math.floor((timeDiff / (1000 * 60 * 60)) % 24);
-    days = Math.floor((timeDiff / (1000 * 60 * 60 * 24)) % 30);
-    months = Math.floor((timeDiff / (1000 * 60 * 60 * 24 * 30)) % 12);
+    let seconds = Math.floor((timeDiff / 1000) % 60);
+    let minutes = Math.floor((timeDiff / 1000 / 60) % 60);
+    let hours = Math.floor((timeDiff / (1000 * 60 * 60)) % 24);
+    let days = Math.floor((timeDiff / (1000 * 60 * 60 * 24)) % 30);
+    let months = Math.floor((timeDiff / (1000 * 60 * 60 * 24 * 30)) % 12);
 
-    countdown_parts = ""
-    
-    lastDelted = False
-    if (months != 0) {
-        lastDelted = False
-        if (months == 1) {countdown_parts += months+"month"+" "}
-        else {countdown_parts += months+"months"+" "}
-    } else { lastDelted = True }
+    let countdown_parts = "";
 
-
-    if (days == 0 && lastDelted == True) {lastDelted = True}
-    else {
-        lastDelted = False
-        if (days == 1) {countdown_parts += days+"day"+" "}
-        else {countdown_parts += days+"days"+" "}
+    let lastDeleted = false;
+    if (months !== 0) {
+        lastDeleted = false;
+        countdown_parts += months + (months === 1 ? " month " : " months ");
+    } else {
+        lastDeleted = true;
     }
 
-    if (hours == 0 && lastDelted == True) {lastDelted = True}
-    else {
-        lastDelted = False
-        if (hours == 1) {countdown_parts += hours+"hour"+" "}
-        else {countdown_parts += hours+"hours"+" "}
+    if (days !== 0 || !lastDeleted) {
+        lastDeleted = false;
+        countdown_parts += days + (days === 1 ? " day " : " days ");
     }
 
-    if (minutes == 0 && lastDelted == True) {lastDelted = True}
-    else {
-        lastDelted = False
-        if (minutes == 1) {countdown_parts += minutes+"minute"+" "}
-        else {countdown_parts += minutes+"minutes"+" "}
+    if (hours !== 0 || !lastDeleted) {
+        lastDeleted = false;
+        countdown_parts += hours + (hours === 1 ? " hour " : " hours ");
     }
 
-    if (seconds == 0 && lastDelted == True) {lastDelted = True}
-    else {
-        lastDelted = False
-        if (seconds == 1) {countdown_parts += seconds+"second"}
-        else {countdown_parts += seconds+"seconds"}
+    if (minutes !== 0 || !lastDeleted) {
+        lastDeleted = false;
+        countdown_parts += minutes + (minutes === 1 ? " minute " : " minutes ");
+    }
+
+    if (seconds !== 0 || !lastDeleted) {
+        lastDeleted = false;
+        countdown_parts += seconds + (seconds === 1 ? " second" : " seconds");
     }
 
     document.getElementById("countdownone").innerHTML = countdown_parts;
 
-    /////////////////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     endDate = new Date("2023-10-12T00:00:00Z"); // Your end date
 
-    const timeDiff = endDate - currentDate;
+    timeDiff = endDate - currentDate;
 
     if (timeDiff <= 0) {
         document.getElementById("countdowntwo").innerHTML = "The quest has now released!!";
@@ -72,42 +64,34 @@ function updateCountdown() {
     days = Math.floor((timeDiff / (1000 * 60 * 60 * 24)) % 30);
     months = Math.floor((timeDiff / (1000 * 60 * 60 * 24 * 30)) % 12);
 
-    countdown_parts = ""
+    countdown_parts = "";
 
-    lastDelted = False
-    if (months != 0) {
-        lastDelted = False
-        if (months == 1) {countdown_parts += months+"month"+" "}
-        else {countdown_parts += months+"months"+" "}
-    } else { lastDelted = True }
-
-
-    if (days == 0 && lastDelted == True) {lastDelted = True}
-    else {
-        lastDelted = False
-        if (days == 1) {countdown_parts += days+"day"+" "}
-        else {countdown_parts += days+"days"+" "}
+    lastDeleted = false;
+    if (months !== 0) {
+        lastDeleted = false;
+        countdown_parts += months + (months === 1 ? " month " : " months ");
+    } else {
+        lastDeleted = true;
     }
 
-    if (hours == 0 && lastDelted == True) {lastDelted = True}
-    else {
-        lastDelted = False
-        if (hours == 1) {countdown_parts += hours+"hour"+" "}
-        else {countdown_parts += hours+"hours"+" "}
+    if (days !== 0 || !lastDeleted) {
+        lastDeleted = false;
+        countdown_parts += days + (days === 1 ? " day " : " days ");
     }
 
-    if (minutes == 0 && lastDelted == True) {lastDelted = True}
-    else {
-        lastDelted = False
-        if (minutes == 1) {countdown_parts += minutes+"minute"+" "}
-        else {countdown_parts += minutes+"minutes"+" "}
+    if (hours !== 0 || !lastDeleted) {
+        lastDeleted = false;
+        countdown_parts += hours + (hours === 1 ? " hour " : " hours ");
     }
 
-    if (seconds == 0 && lastDelted == True) {lastDelted = True}
-    else {
-        lastDelted = False
-        if (seconds == 1) {countdown_parts += seconds+"second"}
-        else {countdown_parts += seconds+"seconds"}
+    if (minutes !== 0 || !lastDeleted) {
+        lastDeleted = false;
+        countdown_parts += minutes + (minutes === 1 ? " minute " : " minutes ");
+    }
+
+    if (seconds !== 0 || !lastDeleted) {
+        lastDeleted = false;
+        countdown_parts += seconds + (seconds === 1 ? " second" : " seconds");
     }
 
     document.getElementById("countdowntwo").innerHTML = countdown_parts;

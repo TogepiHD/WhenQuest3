@@ -1,6 +1,6 @@
 function updateCountdown() {
     const currentDate = new Date();
-    let endDate = new Date("2023-09-12T00:00:00Z"); // Your end date
+    let endDate = new Date("2023-09-27T16:00:00Z"); // Your end date
 
     let timeDiff = endDate - currentDate;
 
@@ -49,7 +49,7 @@ function updateCountdown() {
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    endDate = new Date("2023-10-12T00:00:00Z"); // Your end date
+    endDate = new Date("2023-10-10T00:00:00Z"); // Your end date
 
     timeDiff = endDate - currentDate;
 
